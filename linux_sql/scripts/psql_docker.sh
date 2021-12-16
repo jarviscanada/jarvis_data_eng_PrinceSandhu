@@ -55,10 +55,10 @@ case $cmd in
       docker container stop jrvs-psql
       exit 0;
     fi
-	  ;;
+    ;;
   *)
-	  echo 'Illegal command'
-	  echo 'Commands: start|stop|create'
-	  exit 1
-	  ;;
+   echo 'Illegal command'
+   echo 'Commands: start|stop|create'
+   exit 1
+   ;;
 esac
