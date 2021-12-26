@@ -22,7 +22,7 @@ psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 ./scripts/host_info.sh localhost 5432 host_info postgres password
 
 #Insert hardware usage data into the database using host_usage.sh.
-./scripts/host_usage.sh localhost 5432 host_usage postgres paassword
+./scripts/host_usage.sh localhost 5432 host_usage postgres password
 
 #Crontab setup (host_usage executes every minute).
 * * * * * bash /pwd/scripts/host_useage.sh localhost 5432 host_usage postgres password
