@@ -38,15 +38,15 @@ statement="INSERT INTO host_info(
     total_mem,
     timestamp
     )VALUES(
-      '$hostname',
-	    '$cpu_number',
-	    '$cpu_architecture',
-	    '$cpu_model',
-	    '$cpu_mhz',
-	    '$l2_cache',
-	    '$total_mem',
-	    '$timestamp'
-	  )"
+    	'$hostname',
+	'$cpu_number',
+	'$cpu_architecture',
+	'$cpu_model',
+	'$cpu_mhz',
+	'$l2_cache',
+	'$total_mem',
+	'$timestamp'
+    )"
 
 #Connect to PSQL and execute insert statement.
 export PGPASSWORD=$psql_password
