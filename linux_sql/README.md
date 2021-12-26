@@ -95,7 +95,32 @@ The following contains the schema for the `host_info` and `host_usage` tables.
 | disk_available | FLOAT     | not null                     |
 
 # Test
-...
+The `psql_docker.sh` script was tested as follows:
+````
+#Command Line Arguments verification (pass):
+./scripts/psql_docker.sh create postgres
+Error: Create requires username and password.
+
+#Create Container (pass):
+./scripts/psql_docker.sh create postgres password
+Error: No such container: jrvs-psql
+creating container
+
+#Verify jrvs-psql container exists (pass):
+docker container ls -a
+CONTAINER ID   IMAGE                 COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+f4c36ec57546   postgres:9.6-alpine   "docker-entrypoint.s…"   36 seconds ago   Up 35 seconds   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   jrvs-psql
+
+#Stop running container (pass):
+./scripts/psql_docker.sh stop
+Stopping container.
+jrvs-psql
+
+#Start stopped container (pass):
+./scripts/psql_docker.sh start
+Starting container.
+jrvs-psql
+````
 
 # Deployment
 ...
