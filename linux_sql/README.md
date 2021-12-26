@@ -1,8 +1,13 @@
 # Linux Cluster Monitoring Agent
-This project is under development. Since this project follows the GitFlow, the final work will be merged to the master branch after Team Code Team.
 
 # Introduction
-...
+The Linux Cluster Monitoring Agent enables users to monitor the individual Linux hosts/nodes of a system which have been connected internally via a switch.
+The individual nodes initially provide hardware specifications and, with the use of `crontab`, periodically provide usage data, including whether a node has failed (if it provides less than three updates in a five-minute interval).
+
+Technologies utilized:
+- Docker
+- Bash
+- Postgres SQL
 
 # Quick Start
 ````
@@ -23,8 +28,7 @@ psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 * * * * * bash /pwd/scripts/host_useage.sh localhost 5432 host_usage postgres password
 ````
 # Implementation
-This project has been provisioned using Docker through the `psql_docker.sh` script. Each host/node contains `host_info.sh` and `host_usage.sh`. The former script records the hardware specification and the latter records the resource usage data of their respective hosts. Resource usage data is collected every minute, which is configured with `crontab`. The scripts record the aforementioned data into the `host_info` and `host_usage` tables of the `host_agent` PostgreSQL database. SQL queries are constructed to group hosts by hardware info, average memory usage, and to detect host failure.
-
+The Linux Cluster Monitoring Agent project has been provisioned using Docker through the `psql_docker.sh` script. Each host/node contains `host_info.sh` and `host_usage.sh`. The former script records the hardware specification and the latter records the resource usage data of their respective hosts. Resource usage data is collected every minute, which is configured with `crontab`. The scripts record the aforementioned data into the `host_info` and `host_usage` tables of the `host_agent` PostgreSQL database. SQL queries are constructed to group hosts by hardware info, average memory usage, and to detect host failure.
 
 ## Architecture
 ...
