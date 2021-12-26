@@ -122,6 +122,119 @@ Starting container.
 jrvs-psql
 ````
 
+The `sql.ddl` script was tested as follows:
+````
+#Create tables in the host_agent database.
+psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
+````
+
+````
+#Connect to the host_agent database and verify the tables exist (pass).
+host_agent=# \dt
+````
+
+| SCHEMA  | NAME       | TYPE                       | OWNER   |
+|---------|------------|----------------------------|----------
+| public  | host_info  | not null                   | postgres
+| public  | host_usage | Foreign Key (host_info.id) | postgres
+
+
+#Verify fields in host_info table (pass).
+host_agent=# \d host_info
+
+                       Table "public.host_info"
+      Column      |         Type                |            Modifiers
+------------------+-----------------------------+-------------------------------
+ id               | integer                     | not null default nextval('host_info_id_seq'::regclass)
+ hostname         | character varying           | not null
+ cpu_number       | integer                     | not null
+ cpu_architecture | character varying           | not null
+ cpu_model        | character varying           | not null
+ cpu_mhz          | double precision            | not null
+ l2_cache         | integer                     | not null
+ total_mem        | integer                     | not null
+ timestamp        | timestamp without time zone | not null
+
+Indexes:
+    "host_info_pkey" PRIMARY KEY, btree (id)
+    "host_info_hostname_key" UNIQUE CONSTRAINT, btree (hostname)
+Referenced by:
+    TABLE "host_usage" CONSTRAINT "host_usage_host_id_fkey" FOREIGN KEY (host_id
+) REFERENCES host_info(id)
+
+
+host_agent=# \d host_usage
+
+                Table "public.host_usage"
+     Column     |            Type             | Modifiers 
+----------------+-----------------------------+-----------
+ timestamp      | timestamp without time zone | not null
+ host_id        | integer                     | not null
+ memory_free    | double precision            | not null
+ cpu_idle       | integer                     | not null
+ cpu_kernel     | integer                     | not null
+ disk_io        | integer                     | not null
+ disk_available | double precision            | not null
+
+Foreign-key constraints:
+    "host_usage_host_id_fkey" FOREIGN KEY (host_id) REFERENCES host_info(id)
+
+````
+
+
+The `host_info.sh` script was tested by verifying that the corresponding fields from the `lscpu` and `cat /proc/meminfo` commands correctly populate the `host_info.sh` PSQL table:
+````
+#Print CPU architecture information.
+$lscpu
+
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    2
+Core(s) per socket:    1
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 79
+Model name:            Intel(R) Xeon(R) CPU @ 2.20GHz
+Stepping:              0
+CPU MHz:               2200.158
+BogoMIPS:              4400.31
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              56320K
+NUMA node0 CPU(s):     0,1
+
+#Print memory information to console:
+$cat /proc/meminfo
+
+MemTotal:        8005732 kB
+MemFree:         7222760 kB
+MemAvailable:    7340884 kB
+
+#Create the host_info and host_usage tables:
+
+
+psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
+#Insert into the host_data table of host_agent:
+
+
+#Verification (pass):
+SELECT * FROM host_info;
+
+ id | hostname | cpu_number | cpu_architecture | cpu_model | cpu_mhz | l2_cache | total_mem | timestamp      
+-------------------------------------------------------------------------------------------------------
+ 10 | jrvs-remote-desktop-centos7.us-east1-c.c.polynomial-land-334415.internal | 2 | x86_64 | 79 | 2200.21 | 256 | 8005732 | 2021-12-26 18:22:38
+
+````
+
+
 # Deployment
 ...
 
