@@ -2,7 +2,7 @@
 
 # Introduction
 The Linux Cluster Monitoring Agent enables users to monitor the individual Linux hosts/nodes of a system which have been connected internally via a switch.
-The individual nodes initially provide hardware specifications and, with the use of `crontab`, periodically provide usage data, including whether a node has failed (if it provides less than three updates in a five-minute interval). This aforementioned information can help the LCA team make informed decisions about the system in question.
+The individual nodes initially provide hardware specifications and, with the use of `crontab`, periodically provide usage data, including whether a node has failed (if it provides less than three updates in a five-minute interval). This aforementioned information can aid the LCA team make informed decisions about the system in question.
 
 Technologies utilized:
 - Docker
@@ -19,10 +19,10 @@ Technologies utilized:
 psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 
 #Insert hardware specifications data into the database using host_info.sh.
-./scripts/host_info.sh localhost 5432 host_info postgres password
+./scripts/host_info.sh localhost 5432 host_agent postgres password
 
 #Insert hardware usage data into the database using host_usage.sh.
-./scripts/host_usage.sh localhost 5432 host_usage postgres password
+./scripts/host_usage.sh localhost 5432 host_agent postgres password
 
 #Crontab setup (host_usage executes every minute).
 * * * * * bash /pwd/scripts/host_useage.sh localhost 5432 host_usage postgres password
