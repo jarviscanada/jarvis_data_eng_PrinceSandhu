@@ -46,7 +46,8 @@ insert_stmt="INSERT INTO host_usage(
     '$cpu_idle',
     '$cpu_kernel',
     '$disk_io',
-    '$disk_available');"
+    '$disk_available'
+  );"
 
 #Insert data into database.
 export PGPASSWORD=$psql_password
