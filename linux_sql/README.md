@@ -2,7 +2,7 @@
 
 # Introduction
 The Linux Cluster Monitoring Agent enables users to monitor the individual Linux hosts/nodes of a system which have been connected internally via a switch.
-The individual nodes initially provide hardware specifications and, with the use of `crontab`, periodically provide usage data, including whether a node has failed (if it provides less than three updates in a five-minute interval). This aforementioned information can aid the LCA team make informed decisions about the system in question.
+The individual nodes initially provide hardware specifications (architecture, model, speed, memory, etc.) and, with the use of `crontab`, periodically provide usage data (available memory, kernel usage, disk I/O, etc.), including whether a node has failed (if it provides less than three updates in a five-minute interval). This aforementioned information can aid the LCA team make informed decisions about the system in question.
 
 Technologies utilized:
 - Docker
