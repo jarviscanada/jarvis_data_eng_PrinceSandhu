@@ -21,8 +21,8 @@ disk_info=$(df -BM)
 #Retrieve hardware specification variables.
 hostname=$(hostname -f)
 memory_free=$(echo "$vmstat_mb" | awk '{print $4}'| tail -n1 | xargs)
-cpu_idle=$(echo "$vmstat_mb" | awk '{print $14}' | tail -n1 | xargs)
-cpu_kernel=$(echo "$vmstat_mb" | awk '{print $15}' | tail -n1 | xargs)
+cpu_idle=$(echo "$vmstat_mb" | awk '{print $15}' | tail -n1 | xargs)
+cpu_kernel=$(echo "$vmstat_mb" | awk '{print $13}' | tail -n1 | xargs)
 disk_io=$(echo "$vmstat_disk" | awk '{print $10}' | tail -n1 | xargs)
 disk_available=$(echo "$disk_info" | awk '{print $4}' | tail -n1 | xargs)
 disk_available="${disk_available::-1}"
