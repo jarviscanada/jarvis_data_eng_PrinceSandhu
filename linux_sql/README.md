@@ -132,7 +132,7 @@ psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 host_agent=# \dt
 
 
-| SCHEMA  | NAME       | TYPE                       | OWNER   |
+  SCHEMA  | NAME       | TYPE                       | OWNER   
 |---------|------------|----------------------------|----------
 | public  | host_info  | not null                   | postgres
 | public  | host_usage | Foreign Key (host_info.id) | postgres
@@ -142,8 +142,8 @@ host_agent=# \dt
 host_agent=# \d host_info
 
                       Table public.host_info
-|      Column     |            Type             |            Modifiers
-------------------|-----------------------------|-------------------------------
+       Column     |            Type             |                       Modifiers
+------------------|-----------------------------|-------------------------------------------------------
  id               | integer                     | not null default nextval('host_info_id_seq'::regclass)
  hostname         | character varying           | not null
  cpu_number       | integer                     | not null
