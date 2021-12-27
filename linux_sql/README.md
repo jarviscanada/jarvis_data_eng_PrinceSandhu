@@ -201,14 +201,14 @@ L2 cache:              256K
 L3 cache:              56320K
 NUMA node0 CPU(s):     0,1
 
-#Print memory information to console:
+#Print memory information:
 $cat /proc/meminfo
 
 MemTotal:        8005732 kB
 MemFree:         7222760 kB
 MemAvailable:    7340884 kB
 
-#Insert into the host_data table of host_agent:
+#Insert into the host_info table of host_agent:
 ./scripts/host_info.sh localhost 5432 host_agent postgres password
 
 #Verification (pass):
@@ -217,11 +217,27 @@ SELECT * FROM host_info;
  id |                 hostname                | cpu_number | cpu_architecture | cpu_model          | cpu_mhz | l2_cache | total_mem | timestamp      
 ------------------------------------------------------------------------------------------------------------------------------------------------
  10 | jrvs-remote-desktop-centos7.us-east1-c. |      2     |      x86_64      |  Intel(R)Xeon(R)   | 2200.21 |    266   |  8005732  | 2021-12-26
-    |  c.polynomial-land-334415.internal      |            |                  |  CPU@2.20GHz       |         |          |           |  18:22:38
+    |  c.polynomial-land-334415.internal      |            |                  |  CPU@2.20GHz       |         |          |           | 18:22:38
 ````
 
 ### host_usage.sh
 The `host_usage.sh` script was tested by verifying that the corresponding fields from the `vmstat` and `df` commands correctly populate the `host_usage.sh` PSQL table:
+
+````
+#Print virtual memory statistics.
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- -----timestamp-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs  us sy id wa st        UTC
+ 1  0      0 4694324  2200 1719876   0    0    107    2   105  168  2  0 98  0  0 2021-12-27 01:16:43
+
+#Insert into the host_usage table of host_agent:
+./scripts/host_info.sh localhost 5432 host_agent postgres password
+
+#Verification (pass):
+SELECT * FROM host_usage;
+
+
+
+````
 
 
 
