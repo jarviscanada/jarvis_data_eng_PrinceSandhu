@@ -243,7 +243,7 @@ host_agent=# SELECT * FROM host_usage;
 ````
 
 ### queries.sql
-The three queries from `queries.sql` were tested as follows:
+The three queries from `queries.sql` were tested as follows: sample values were inserted into the `host_info` and `host_usage` tables, and the output was manually inspected upon running each of the queries.
 
 ````
 ...
