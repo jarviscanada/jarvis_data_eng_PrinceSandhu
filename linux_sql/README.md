@@ -208,12 +208,8 @@ MemTotal:        8005732 kB
 MemFree:         7222760 kB
 MemAvailable:    7340884 kB
 
-#Create the host_info and host_usage tables:
-
-
-psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 #Insert into the host_data table of host_agent:
-
+./scripts/host_info.sh localhost 5432 host_agent postgres password
 
 #Verification (pass):
 SELECT * FROM host_info;
