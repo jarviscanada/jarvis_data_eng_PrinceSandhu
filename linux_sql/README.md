@@ -244,7 +244,7 @@ host_agent=# SELECT * FROM host_usage;
 
 # Deployment
 - The PostgreSQL database was provisioned using Docker.
-- `host_info.sh` script is initially run to records the hardware specification into the database.
+- The `host_info.sh` script is initially run to records the hardware specification into the database.
 - With the help of `crontab`, the `host_usage.sh` script runs periodically (every minute) and records the usage data into the database.
 - All corresponding scripts have been stored on GitHub.
 
