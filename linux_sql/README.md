@@ -249,4 +249,6 @@ host_agent=# SELECT * FROM host_usage;
 - All corresponding scripts have been stored on GitHub.
 
 # Improvements
-...
+1. Create a Bash script to detect any hardware changes and update the `host_info` table accordingly. Would be significantly more convenient for long-term application use.
+2. Include more columna (power usage, temperature, etc.) in the `host_usage` table. Would greatly benefit the LCA team in making informed decisions about the system.
+3. Include a script to run all commands at once.
