@@ -230,7 +230,7 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
  1  0      0 4694324  2200 1719876   0    0    107    2   105  168  2  0 98  0  0 2021-12-27 01:16:43
 
 #Insert into the host_usage table of host_agent:
-./scripts/host_info.sh localhost 5432 host_agent postgres password
+./scripts/host_usage.sh localhost 5432 host_agent postgres password
 
 #Verification (pass):
 SELECT * FROM host_usage;
