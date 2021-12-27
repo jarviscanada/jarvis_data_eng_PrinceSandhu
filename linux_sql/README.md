@@ -95,6 +95,7 @@ The following contains the schema for the `host_info` and `host_usage` tables.
 | disk_available | FLOAT     | not null                     |
 
 # Test
+### psql_docker.sh
 The `psql_docker.sh` script was tested as follows:
 ````
 #Command Line Arguments verification (pass):
@@ -121,17 +122,15 @@ jrvs-psql
 Starting container.
 jrvs-psql
 ````
-
+### sql.ddl
 The `sql.ddl` script was tested as follows:
 ````
 #Create tables in the host_agent database.
 psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
-````
 
-````
 #Connect to the host_agent database and verify the tables exist (pass).
 host_agent=# \dt
-````
+
 
 | SCHEMA  | NAME       | TYPE                       | OWNER   |
 |---------|------------|----------------------------|----------
@@ -142,9 +141,9 @@ host_agent=# \dt
 #Verify fields in host_info table (pass).
 host_agent=# \d host_info
 
-                       Table "public.host_info"
-      Column      |         Type                |            Modifiers
-------------------+-----------------------------+-------------------------------
+                      Table public.host_info
+|      Column     |            Type             |            Modifiers
+------------------|-----------------------------|-------------------------------
  id               | integer                     | not null default nextval('host_info_id_seq'::regclass)
  hostname         | character varying           | not null
  cpu_number       | integer                     | not null
@@ -155,19 +154,13 @@ host_agent=# \d host_info
  total_mem        | integer                     | not null
  timestamp        | timestamp without time zone | not null
 
-Indexes:
-    "host_info_pkey" PRIMARY KEY, btree (id)
-    "host_info_hostname_key" UNIQUE CONSTRAINT, btree (hostname)
-Referenced by:
-    TABLE "host_usage" CONSTRAINT "host_usage_host_id_fkey" FOREIGN KEY (host_id
-) REFERENCES host_info(id)
 
-
+#Verify fields in host_usage table (pass).
 host_agent=# \d host_usage
 
-                Table "public.host_usage"
+                    Table public.host_usage
      Column     |            Type             | Modifiers 
-----------------+-----------------------------+-----------
+----------------|-----------------------------|-----------
  timestamp      | timestamp without time zone | not null
  host_id        | integer                     | not null
  memory_free    | double precision            | not null
@@ -175,14 +168,11 @@ host_agent=# \d host_usage
  cpu_kernel     | integer                     | not null
  disk_io        | integer                     | not null
  disk_available | double precision            | not null
-
-Foreign-key constraints:
-    "host_usage_host_id_fkey" FOREIGN KEY (host_id) REFERENCES host_info(id)
-
 ````
 
-
+### host_info.sh
 The `host_info.sh` script was tested by verifying that the corresponding fields from the `lscpu` and `cat /proc/meminfo` commands correctly populate the `host_info.sh` PSQL table:
+
 ````
 #Print CPU architecture information.
 $lscpu
@@ -228,11 +218,15 @@ psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 #Verification (pass):
 SELECT * FROM host_info;
 
- id | hostname | cpu_number | cpu_architecture | cpu_model | cpu_mhz | l2_cache | total_mem | timestamp      
--------------------------------------------------------------------------------------------------------
- 10 | jrvs-remote-desktop-centos7.us-east1-c.c.polynomial-land-334415.internal | 2 | x86_64 | 79 | 2200.21 | 256 | 8005732 | 2021-12-26 18:22:38
-
+ id |                 hostname                | cpu_number | cpu_architecture | cpu_model | cpu_mhz | l2_cache | total_mem | timestamp      
+----------------------------------------------------------------------------------------------------------------------------------------
+ 10 | jrvs-remote-desktop-centos7.us-east1-c. |      2     |      x86_64      |     79    | 2200.21 |    266   |  8005732  | 2021-12-26
+    |  c.polynomial-land-334415.internal      |            |                  |           |         |          |           |  18:22:38
 ````
+
+### host_usage.sh
+The `host_usage.sh` script was tested by verifying that the corresponding fields from the `vmstat` and `df` commands correctly populate the `host_usage.sh` PSQL table:
+
 
 
 # Deployment
