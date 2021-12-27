@@ -21,35 +21,35 @@ disk_info=$(df -BM)
 #Retrieve hardware specification variables.
 hostname=$(hostname -f)
 memory_free=$(echo "$vmstat_mb" | awk '{print $4}'| tail -n1 | xargs)
-cpu_idle=$(echo "$vmstat_mb" | awk '{print $14}'| tail -n1 | xargs)
-cpu_kernel=$(echo "$vmstat_mb" | awk '{print $15}'| tail -n1 | xargs)
-disk_io=$(echo "$vmstat_disk" | awk '{print $10}'| tail -n1 | xargs)
-disk_available=$(echo "$disk_info" | awk '{print $4}'| tail -n1 | xargs)
-timestamp=$(vmstat -t | awk '{print $18,$19}'| tail -n1 | xargs)
+cpu_idle=$(echo "$vmstat_mb" | awk '{print $14}' | tail -n1 | xargs)
+cpu_kernel=$(echo "$vmstat_mb" | awk '{print $15}' | tail -n1 | xargs)
+disk_io=$(echo "$vmstat_disk" | awk '{print $10}' | tail -n1 | xargs)
+disk_available=$(echo "$disk_info" | awk '{print $4}' | tail -n1 | xargs)
+disk_available="${disk_available::-1}"
+timestamp=$(vmstat -t | awk '{print $18,$19}' | tail -n1 | xargs)
 
-#Subquery to find matching id in host_info table
-host_id="(SELECT id FROM host_info WHERE hostname='$hostname')";
+#Subquery to find matching id in host_info table.
+host_id="(SELECT id FROM host_info WHERE hostname='$hostname')"
 
 #Inserts server usage data into host_usage table.
 insert_stmt="INSERT INTO host_usage(
-  timestamp,
-  host_id,
-  memory_free,
-  cpu_idle,
-  cpu_kernel,
-  disk_io,
-  disk_available)
-  VALUES(
-    '$timestamp',
-    '$host_id',
-    '$memory_free',
-    '$cpu_idle',
-    '$cpu_kernel',
-    '$disk_io',
-    '$disk_available'
-  );"
+ timestamp,
+ host_id,
+ memory_free,
+ cpu_idle,
+ cpu_kernel,
+ disk_io,
+ disk_available
+ )VALUES(
+  '$timestamp',
+  $host_id,
+  $memory_free,
+  $cpu_idle,
+  $cpu_kernel,
+  $disk_io,
+  $disk_available)"
 
 #Insert data into database.
 export PGPASSWORD=$psql_password
-psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
+psql -h "$psql_host" -p "$psql_port" -d "$db_name" -U "$psql_user" -c "$insert_stmt"
 exit $?
