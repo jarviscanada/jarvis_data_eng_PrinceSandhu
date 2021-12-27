@@ -212,10 +212,10 @@ MemAvailable:    7340884 kB
 ./scripts/host_info.sh localhost 5432 host_agent postgres password
 
 #Verification (pass):
-SELECT * FROM host_info;
+host_agent=#SELECT * FROM host_info;
 
  id |                 hostname                | cpu_number | cpu_architecture | cpu_model          | cpu_mhz | l2_cache | total_mem | timestamp      
-------------------------------------------------------------------------------------------------------------------------------------------------
+----|-----------------------------------------|------------|------------------|--------------------|---------|----------|-----------|-----------
  10 | jrvs-remote-desktop-centos7.us-east1-c. |      2     |      x86_64      |  Intel(R)Xeon(R)   | 2200.21 |    266   |  8005732  | 2021-12-26
     |  c.polynomial-land-334415.internal      |            |                  |  CPU@2.20GHz       |         |          |           | 18:22:38
 ````
@@ -233,9 +233,12 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 ./scripts/host_usage.sh localhost 5432 host_agent postgres password
 
 #Verification (pass):
-SELECT * FROM host_usage;
+host_agent=# SELECT * FROM host_usage;
 
-
+ timestamp  | host_id | memory_free | cpu_idle | cpu_kernel | disk_io | disk_available 
+------------|---------|-------------|----------|------------|---------|---------------
+ 2021-12-27 |   13    |    4688     |     0    |     97     |    0    |     782
+ 2:46:45    |         |             |          |            |         |
 
 ````
 
