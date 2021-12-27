@@ -214,10 +214,10 @@ MemAvailable:    7340884 kB
 #Verification (pass):
 SELECT * FROM host_info;
 
- id |                 hostname                | cpu_number | cpu_architecture | cpu_model | cpu_mhz | l2_cache | total_mem | timestamp      
-----------------------------------------------------------------------------------------------------------------------------------------
- 10 | jrvs-remote-desktop-centos7.us-east1-c. |      2     |      x86_64      |     79    | 2200.21 |    266   |  8005732  | 2021-12-26
-    |  c.polynomial-land-334415.internal      |            |                  |           |         |          |           |  18:22:38
+ id |                 hostname                | cpu_number | cpu_architecture | cpu_model          | cpu_mhz | l2_cache | total_mem | timestamp      
+------------------------------------------------------------------------------------------------------------------------------------------------
+ 10 | jrvs-remote-desktop-centos7.us-east1-c. |      2     |      x86_64      |  Intel(R)Xeon(R)   | 2200.21 |    266   |  8005732  | 2021-12-26
+    |  c.polynomial-land-334415.internal      |            |                  |  CPU@2.20GHz       |         |          |           |  18:22:38
 ````
 
 ### host_usage.sh
