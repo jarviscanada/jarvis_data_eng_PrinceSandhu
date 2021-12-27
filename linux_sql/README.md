@@ -242,6 +242,14 @@ host_agent=# SELECT * FROM host_usage;
 
 ````
 
+### queries.sql
+The three queries from `queries.sql` were tested as follows:
+
+````
+...
+````
+
+
 # Deployment
 - The PostgreSQL database has been provisioned using Docker.
 - The `host_info.sh` script is initially run to records the hardware specification into the database.
