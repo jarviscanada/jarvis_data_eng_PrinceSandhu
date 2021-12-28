@@ -246,7 +246,33 @@ host_agent=# SELECT * FROM host_usage;
 The three queries from `queries.sql` were tested as follows: sample values were inserted into the `host_info` and `host_usage` tables, and the output was manually inspected upon running each of the queries.
 
 ````
-...
+Query 1:
+INSERT INTO host_info VALUES (1, 'host1', 1, 'x86_64', 'Intel(R) Xeon(R) CPU @ 2.20GHz', 2200.00, 256, 4096, ‘2021-12-24 10:45:19’),
+                             (5, 'host2', 1, 'x86_64', 'Intel(R) Xeon(R) CPU @ 2.20GHz', 2300.00, 256, 2048, '2021-12-25 11:46:20’),
+                             (4, 'host3', 1, 'x86_64', 'Intel(R) Xeon(R) CPU @ 2.20GHz', 2100.00, 256, 1024, '2021-12-26 12:47:21'),
+                             (9, 'host4', 2, 'x86_64', 'Intel(R) Xeon(R) CPU @ 2.20GHz', 2000.00, 256, 1024, '2021-12-27 01:48:22'),
+                             (6, 'host5', 2, 'x86_64', 'Intel(R) Xeon(R) CPU @ 2.20GHz', 1600.00, 256, 512, '2021-12-28 02:49:23');
+
+SELECT cpu_number,
+       id AS host_id,
+       total_mem
+FROM host_info
+GROUP BY cpu_number, id
+ORDER BY total_mem DESC;
+
+Query 1 verification (pass):
+cpu_number | host_id | total_mem 
+-----------|---------|-----------
+         1 |       1 |      4096
+         1 |       5 |      2048
+         1 |       4 |      1024
+         2 |       9 |      1024
+         2 |       6 |       512
+
+
+Query 2:
+
+
 ````
 
 
