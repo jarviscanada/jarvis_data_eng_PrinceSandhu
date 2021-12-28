@@ -31,7 +31,8 @@ psql -h localhost -U postgres -d host_agent -f sql/ddl.sql
 The Linux Cluster Monitoring Agent project has been provisioned using Docker through the `psql_docker.sh` script. Each host/node contains `host_info.sh` and `host_usage.sh`. The former script records the hardware specification and the latter records the resource usage data of their respective hosts. Resource usage data is collected every minute, which is configured with `crontab`. The scripts record the aforementioned data into the `host_info` and `host_usage` tables of the `host_agent` PostgreSQL database. SQL queries are constructed to group hosts by hardware info, average memory usage, and to detect host failure.
 
 ## Architecture
-...
+<img src = './assets/Linux Architectural Diagram.jpg'>
+
 
 ## Scripts
 The following contains a high-level description of each script and its usage.
