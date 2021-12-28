@@ -246,13 +246,14 @@ host_agent=# SELECT * FROM host_usage;
 The three queries from `queries.sql` were tested as follows: sample values were inserted into the `host_info` and `host_usage` tables, and the output was manually inspected upon running each of the queries.
 
 ````
-Query 1:
+Insert sample values into host_info for Query 1:
 INSERT INTO host_info VALUES (1, 'host1', 1, 'x86_64', 'Intel(R) Xeon(R) CPU @ 2.20GHz', 2200.00, 256, 4096, ‘2021-12-24 10:45:19’),
                              (5, 'host2', 1, 'x86_64', 'Intel(R) Xeon(R) CPU @ 2.20GHz', 2300.00, 256, 2048, '2021-12-25 11:46:20’),
                              (4, 'host3', 1, 'x86_64', 'Intel(R) Xeon(R) CPU @ 2.20GHz', 2100.00, 256, 1024, '2021-12-26 12:47:21'),
                              (9, 'host4', 2, 'x86_64', 'Intel(R) Xeon(R) CPU @ 2.20GHz', 2000.00, 256, 1024, '2021-12-27 01:48:22'),
                              (6, 'host5', 2, 'x86_64', 'Intel(R) Xeon(R) CPU @ 2.20GHz', 1600.00, 256, 512, '2021-12-28 02:49:23');
 
+Query 1: Group hosts by CPU number and sort by their memory size in descending order (within each cpu_number group).
 SELECT cpu_number,
        id AS host_id,
        total_mem
@@ -270,11 +271,64 @@ cpu_number | host_id | total_mem
          2 |       6 |       512
 
 
-Query 2:
+Insert sample values into host_usage for Query 2:
+INSERT INTO host_usage VALUES ('2021-12-28 11:25:00', 1, 200, 92, 3, 0, 24000),
+                              ('2021-12-28 11:25:15', 1, 300, 93, 3, 0, 24000),
+                              ('2021-12-28 11:25:30', 1, 400, 94, 4, 0, 24000),
+                              ('2021-12-28 11:25:45', 1, 500, 95, 4, 0, 24000),
+                              ('2021-12-28 11:26:00', 1, 600, 96, 4, 0, 24000),
+                              ('2021-12-28 11:26:15', 5, 200, 82, 4, 0, 23000),
+                              ('2021-12-28 11:26:30', 5, 300, 83, 4, 0, 23000),
+                              ('2021-12-28 11:26:45', 5, 400, 84, 4, 0, 23000),
+                              ('2021-12-28 11:27:00', 5, 500, 95, 5, 0, 23000),
+                              ('2021-12-28 11:27:15', 5, 600, 86, 5, 0, 23000),
+                              ('2021-12-28 11:27:30', 6, 200, 87, 5, 0, 23500),
+                              ('2021-12-28 11:27:45', 6, 300, 87, 6, 0, 23500),
+                              ('2021-12-28 11:28:00', 6, 400, 88, 6, 0, 23500),
+                              ('2021-12-28 11:28:15', 6, 500, 88, 6, 0, 23500),
+                              ('2021-12-28 11:28:30', 6, 500, 89, 6, 0, 23500),
+                              ('2021-12-28 11:28:45', 9, 200, 96, 4, 0, 23000),
+                              ('2021-12-28 11:29:00', 9, 300, 97, 4, 0, 23000);
+                              
+Query 2: Average used memory in percentage over a 5-minute interval for each host.
+SELECT host_usage.host_id,
+       host_info.hostname,
+       round5(host_usage.timestamp),
+       AVG(((host_info.total_mem - host_usage.memory_free)/(host_info.total_mem))*100) as avg_used_mem_percentage
+FROM host_usage,
+     host_info
+WHERE host_usage.host_id = host_info.id
+GROUP BY round5(host_usage.timestamp),
+         host_usage.host_id,
+         host_info.hostname,
+         host_info.total_mem
+ORDER BY host_usage.host_id,
+         round5(host_usage.timestamp);
 
+Query 2 verification (pass):
+host_id | hostname |       round5        | avg_used_mem_percentage 
+--------|----------|---------------------|------------------------
+      1 | host1    | 2021-12-28 11:25:00 |               90.234375
+      5 | host2    | 2021-12-28 11:25:00 |                80.46875
+      6 | host5    | 2021-12-28 11:25:00 |                25.78125
+      9 | host4    | 2021-12-28 11:25:00 |              75.5859375
+
+
+Query 3: Detect host failure (less than 3 data points in a 5-min interval).
+SELECT host_id,
+       round5(timestamp) as timestamp,
+       COUNT(*) AS num_data_points
+FROM host_usage
+GROUP BY host_id, round5(timestamp)
+HAVING COUNT(*)<3
+ORDER BY host_id;
+
+Query 3 verification (pass):
+host_id |      timestamp      | num_data_points 
+--------|---------------------|----------------
+      9 | 2021-12-28 11:25:00 |               2
 
 ````
-
 
 # Deployment
 - The PostgreSQL database has been provisioned using Docker.
