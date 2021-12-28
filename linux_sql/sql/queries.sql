@@ -9,27 +9,24 @@ $$
 
 -- Query 1: Group Hosts by hardware info.
 SELECT cpu_number,
-    id,
-    total_mem,
-    row_number() OVER(
-        PARTITION BY cpu_number
-        ORDER BY total_mem DESC
-    )
-    FROM host_info;
+       id,
+       total_mem
+FROM host_info
+GROUP BY cpu_number, id
+ORDER BY total_mem DESC;
 
 --Query 2: Average memory usage.
-SELECT host_id,
+SELECT host_usage.host_id,
        round5(host_usage.timestamp),
-       trunc(avg(host_info.total_mem - host_info.memory_free ) / avg( host_info.total_mem ) * 100,1)
-FROM host_info,host_usage
-LEFT JOIN host_info
-    ON host_usage.host_id=host_info.id
-GROUP BY round5, host_usage.host_id
+       AVG(((host_info.total_mem - host_info.memory_free)/(host_info.total_mum))*100)
+FROM host_usage,host_info
+GROUP BY round5(host_usage.timestamp), host_usage.host_id
 
---Query 3: Detect host failure (<3 data points in a 5-min interval).
+--Query 3: Detect host failure (less than 3 data points in a 5-min interval).
 SELECT host_id,
-       round5(host_usage.timestamp),
-       COUNT(host_id) AS num_data_points
+       round5(timestamp),
+       COUNT(*) AS num_data_points
 FROM host_usage
-GROUP BY host_id, round5
-HAVING count(host_id)<3
+GROUP BY host_id, round5(timestamp)
+HAVING COUNT(*)<3
+ORDER BY host_id
