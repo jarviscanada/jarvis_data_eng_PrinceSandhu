@@ -24,7 +24,7 @@
   ],
   "jarvis_projects": [
     {
-      "description": "Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in the system. PostgreSQL database provisioned using Docker. Bash scripts programmed to extract hardware specifications and, with the use of crontab, periodically provide update the database with usage data.",
+      "description": "Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in the system. PostgreSQL database provisioned using Docker. Bash scripts programmed to extract hardware specifications and, with the use of crontab, periodically update the database with usage data.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
