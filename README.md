@@ -58,6 +58,5 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_PrinceSand
 - Laguages: English, Punjabi, French
 - Day-trader
 - Volleyball, baseball, basketball, tennis, and hockey player
-- Cyclist.
 - Bhangra Dancer
 - Maple Leafs, Blue Jays, Raptors, UFC fan
