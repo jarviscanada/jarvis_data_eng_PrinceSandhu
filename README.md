@@ -6,7 +6,7 @@ I have graduated with a Bachelor’s in Software Engineering from McMaster Unive
 
 **Proficient:** Java, Algorithms & Data Structures, Linux/Bash, Agile/Scrum, Git
 
-**Competent:** C, JavaScript, RDBMS/SQL, HTML/CSS, React Native
+**Competent:** C, JavaScript, RDBMS/SQL, HTML/CSS, React Native, LaTeX
 
 **Familiar:** TypeScript, React, Python, JUnit, MATLAB, UML
 
