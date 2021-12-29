@@ -55,9 +55,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_PrinceSand
 
 ## Miscellaneous
 - Harvard edX Mobile App Development with React Native (2020)
-- English, Punjabi, French
+- Laguages: English, Punjabi, French
 - Day-trading
-- Basketball, volleyball, baseball, tennis, hockey player
+- Volleyball, baseball, basketball, tennis, and hockey player
 - Cycling
 - Bhangra Dancer
 - Maple Leafs, Blue Jays, Raptors, UFC fan
