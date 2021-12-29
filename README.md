@@ -1,6 +1,6 @@
 # Prince Sandhu . Jarvis Consulting
 
-...
+I have graduated with a Bachelor’s in Software Engineering from McMaster University in 2019. I am currently employed by Jarvis Consulting Group in pursuit of extensively expanding my software application skills through working on various exciting projects by utilizing current and in-demand technologies and frameworks. My prior industry experience includes a one-year internship at the Ontario Ministry of Children, Community and Social Services. I supported the System Development & Maintenance team in planning, developing, implementing, and testing the Child Protection Information Network (CPIN) application, along with providing tier-2 support for onboarding regional agencies. I particularly enjoy tackling new challenges regularly and the dynamic nature of the profession is what excites me and is precisely the reason why I chose to pursue a career in the software development industry.
 
 ## Skills
 
