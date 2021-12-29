@@ -68,9 +68,9 @@ highlighted_projects:
     #project name
   - name: "..."
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "..."
+    description: ".................................................."
   - name: "..."
-    description: "..."
+    description: ".................................................."
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
@@ -91,12 +91,12 @@ professional_experience:
 education: 
   - school_name: "McMaster University"
     duration: "2014-2019"
-    degree: "Bachelor of Engineering (Software)"
+    degree: "Bachelor of Engineering"
     department: "Software Engineering"
     # optional
     awards_achievements:
-      - "Dean's List (2017)"
-      - "GPA: 3.4/4.0" 
+      - "Dean's List (2017,2019)"
+      - "GPA: 3.5/4.0"
 
 #Optional section
 others:
@@ -104,14 +104,13 @@ others:
   - title: "Certificates"
     bullets:
       - "Harvard edX Mobile App Development with React Native (2020)"
+  - title: "Languages"
+    bullets:
+      - "Laguages: English, Punjabi, French"
   - title: "Activities/Hobbies"
     bullets:
       - "Day-trading"
-      - "Basketball player"
-      - "Volleyball player"
-      - "Tennis player"
-      - "Hockey player"
-      - "Baseball player"
+      - "Volleyball, baseball, basketball, tennis, and hockey player"
       - "Cycling"
       - "Bhangra Dancer"
       - "Maple Leafs, Blue Jays, Raptors, UFC fan"
