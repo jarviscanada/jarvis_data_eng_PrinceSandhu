@@ -35,9 +35,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_PrinceSand
 
 
 ## Highlighted Projects
-**Project Emacs (Year IV Capstone Project)**: Developed an application utilizing Typescript, HTML, and CSS, while adhering to the software development life cycle, that enables users to take textual and handwritten notes while organizing and visualizing them in a non-hierarchical convention, received an A+
+**Project Emacs (Year IV Capstone Project)**: Developed an application utilizing Typescript, HTML, and CSS, while adhering to the software development life cycle, that enables users to take textual and handwritten notes while organizing and visualizing them in a non-hierarchical convention, received an A+.
 
-**GlobeTrans (Year III Cornerstone Project)**: Designed a large software system compliant to the specified business events and user scenarios, in an agile and team environment; received an A+. Design process included: establishing requirements, identifying, implementing, and documenting the architectural and detailed designs, developing and testing the prototype
+**GlobeTrans (Year III Cornerstone Project)**: Designed a large software system compliant to the specified business events and user scenarios, in an agile and team environment; received an A+. Design process included: establishing requirements, identifying, implementing, and documenting the architectural and detailed designs, developing and testing the prototype.
 
 
 ## Professional Experiences

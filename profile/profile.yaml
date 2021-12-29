@@ -69,9 +69,9 @@ highlighted_projects:
     #project name
   - name: "Project Emacs (Year IV Capstone Project)"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Developed an application utilizing Typescript, HTML, and CSS, while adhering to the software development life cycle, that enables users to take textual and handwritten notes while organizing and visualizing them in a non-hierarchical convention, received an A+"
+    description: "Developed an application utilizing Typescript, HTML, and CSS, while adhering to the software development life cycle, that enables users to take textual and handwritten notes while organizing and visualizing them in a non-hierarchical convention, received an A+."
   - name: "GlobeTrans (Year III Cornerstone Project)"
-    description: "Designed a large software system compliant to the specified business events and user scenarios, in an agile and team environment; received an A+. Design process included: establishing requirements, identifying, implementing, and documenting the architectural and detailed designs, developing and testing the prototype"
+    description: "Designed a large software system compliant to the specified business events and user scenarios, in an agile and team environment; received an A+. Design process included: establishing requirements, identifying, implementing, and documenting the architectural and detailed designs, developing and testing the prototype."
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
