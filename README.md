@@ -15,7 +15,7 @@ I have graduated with a Bachelor’s in Software Engineering from McMaster Unive
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu](https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu/tree/master/linux_sql)]: ...
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu/tree/master/linux_sql)]: Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in the system. PostgreSQL database provisioned using Docker. Bash scripts programmed to extract hardware specifications and, with the use of crontab, periodically provide update the database with usage data.
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu/tree/master/core_java)]:
       
