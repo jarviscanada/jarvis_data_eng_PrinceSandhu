@@ -42,7 +42,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_PrinceSand
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (December 2021-present)**: Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.
+**Software Developer, Jarvis (December 2021-present)**: Exercised agile methodologies on a daily basis in a team environment to design and implement numerous software projects using a vide variety of technologies such as Linux, PostgreSQL, Docker, and Git.
 
 **Junior Application Developer, Ontario Ministry of Children, Community, and Social Services (September 2017-September 2018)**: Supported the System Development & Maintenance team in planning, developing, implementing, and testing the Child Protection Information Network application. Documented and tracked testing defects, debugged, and troubleshot to ensure new requirements are implemented while existing functionality is not compromised.
 
