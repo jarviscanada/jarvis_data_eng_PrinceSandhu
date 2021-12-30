@@ -49,8 +49,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_PrinceSand
 
 ## Education
 **McMaster University (2014-2019)**, Bachelor of Engineering, Software Engineering
-- Dean's List (2017,2019)
-- GPA: 3.5/4.0
+- Dean's List (2017)
+- GPA: 3.3/4.0
 
 
 ## Miscellaneous
