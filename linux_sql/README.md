@@ -339,5 +339,5 @@ host_id |      timestamp      | num_data_points
 
 # Improvements
 1. Create a Bash script to detect any hardware changes and update the `host_info` table accordingly. Would be significantly more convenient for long-term application use.
-2. Include more columna (power usage, temperature, etc.) in the `host_usage` table. Would greatly benefit the LCA team in making informed decisions about the system.
+2. Include more columns (power usage, temperature, etc.) in the `host_usage` table. Would greatly benefit the LCA team in making informed decisions about the system.
 3. Include a script to run all commands at once.
