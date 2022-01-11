@@ -11,7 +11,7 @@ public class RegexExcImp implements RegexExc{
     }
 
     /**
-     * return true if ip is valid
+     * return true if IP is valid.
      * IP address range is from 0.0.0.0 to 999.999.999.999
      * @param ip
      * @return
@@ -21,7 +21,7 @@ public class RegexExcImp implements RegexExc{
     }
 
     /**
-     * return true if line is empty (empty, whitespace, tab)
+     * return true if line is empty (empty, whitespace, tab, etc.).
      * @param line
      * @return
      */
