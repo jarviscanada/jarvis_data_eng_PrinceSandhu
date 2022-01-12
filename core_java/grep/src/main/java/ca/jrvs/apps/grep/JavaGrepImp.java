@@ -1,18 +1,17 @@
 package ca.jrvs.apps.grep;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.log4j.BasicConfigurator;
 import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
-import org.apache.log4j.BasicConfigurator;
 
-public class JavaGrepImp implements JavaGrep{
+public class JavaGrepImp implements JavaGrep {
 
-    final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
-
+    final Logger logger = LoggerFactory.getLogger(JavaGrepImp.class);
     private String regex;
     private String rootPath;
     private String outFile;
@@ -22,11 +21,11 @@ public class JavaGrepImp implements JavaGrep{
      * @throws IOException
      */
     @Override
-    public void process() throws IOException {
+    public void process() throws IOException{
         List<String> matchedLines = new ArrayList<>();
-        for(File file : listFiles(this.getRootPath())){
-            for(String line : readLines(file)){
-                if(containsPattern(line)){
+        for (File file : listFiles(this.getRootPath())){
+            for (String line : readLines(file)) {
+                if (containsPattern(line)){
                     matchedLines.add(line);
                 }
             }
@@ -40,7 +39,7 @@ public class JavaGrepImp implements JavaGrep{
      * @return files under the rootDir.
      */
     @Override
-    public List<File> listFiles(String rootDir) {
+    public List<File> listFiles(String rootDir){
         List<File> files = new ArrayList<>();
         File root = new File(rootDir);
 
@@ -63,7 +62,7 @@ public class JavaGrepImp implements JavaGrep{
      * @throws IllegalArgumentException if a given inputFile is not a file.
      */
     @Override
-    public List<String> readLines(File inputFile) {
+    public List<String> readLines(File inputFile) throws IllegalArgumentException{
         List<String> lines = new ArrayList<>();
         try{
             String line;
@@ -72,8 +71,8 @@ public class JavaGrepImp implements JavaGrep{
             while((line = bufferedReader.readLine()) != null){
                 lines.add(line);
             }
-        } catch(IOException e) {
-            e.printStackTrace();
+        } catch (IOException e){
+            throw new IllegalArgumentException("File does not exist or file parsing issue.");
         }
         return lines;
     }
@@ -84,7 +83,7 @@ public class JavaGrepImp implements JavaGrep{
      * @return true if there is a match.
      */
     @Override
-    public boolean containsPattern(String line) {
+    public boolean containsPattern(String line){
         Pattern pattern = Pattern.compile(this.getRegex());
         Matcher matcher = pattern.matcher(line);
         return matcher.find();
@@ -96,21 +95,21 @@ public class JavaGrepImp implements JavaGrep{
      * @throws IOException if write failed.
      */
     @Override
-    public void writeToFile(List<String> lines) throws IOException {
+    public void writeToFile(List<String> lines) throws IOException{
         FileWriter fileWriter = new FileWriter(this.getOutFile());
-        for(String line : lines){
+        for (String line : lines) {
             fileWriter.write(line + "\n");
         }
         fileWriter.close();
     }
 
     @Override
-    public String getRootPath() {
+    public String getRootPath(){
         return this.rootPath;
     }
 
     @Override
-    public void setRootPath(String rootPath) {
+    public void setRootPath(String rootPath){
         this.rootPath = rootPath;
     }
 
@@ -120,30 +119,26 @@ public class JavaGrepImp implements JavaGrep{
     }
 
     @Override
-    public void setRegex(String regex) {
+    public void setRegex(String regex){
         this.regex = regex;
     }
 
     @Override
-    public String getOutFile() {
+    public String getOutFile(){
         return this.outFile;
     }
 
     @Override
-    public void setOutFile(String outFile) {
+    public void setOutFile(String outFile){
         this.outFile = outFile;
     }
 
-    public static void main(String[] args) {
-        if(args.length != 3){
+    public static void main(String[] args){
+        if (args.length != 3){
             throw new IllegalArgumentException("USAGE: JavaGrep regex rootPath outFile.");
         }
 
-        if (args.length != 3) {
-            throw new IllegalArgumentException("Usage: JavaGrep regex rootPath outFile");
-        }
-
-        // Use default logger config
+        //default logger config
         BasicConfigurator.configure();
 
         JavaGrepImp javaGrepImp = new JavaGrepImp();
@@ -151,11 +146,10 @@ public class JavaGrepImp implements JavaGrep{
         javaGrepImp.setRootPath(args[1]);
         javaGrepImp.setOutFile(args[2]);
 
-        try {
+        try{
             javaGrepImp.process();
-        } catch (Exception ex) {
-            javaGrepImp.logger.error("Error: Unable to process", ex);
+        } catch(Exception ex){
+            javaGrepImp.logger.error("Error: Unable to process.", ex);
         }
     }
-
 }
