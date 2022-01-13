@@ -6,7 +6,7 @@ I have graduated with a Bachelor’s in Software Engineering from McMaster Unive
 
 **Proficient:** Java, Algorithms & Data Structures, Linux/Bash, Agile/Scrum, Git
 
-**Competent:** C, JavaScript, RDBMS/SQL, HTML/CSS, React Native, LaTeX
+**Competent:** JavaScript, RDBMS/SQL, HTML/CSS, C, React Native, LaTeX
 
 **Familiar:** TypeScript, React, Python, JUnit, MATLAB, UML
 
@@ -15,7 +15,7 @@ I have graduated with a Bachelor’s in Software Engineering from McMaster Unive
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu](https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu/tree/master/linux_sql)]: Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in the system. PostgreSQL database provisioned using Docker. Bash scripts programmed to extract hardware specifications and, with the use of crontab, periodically update the database with usage data.
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu/tree/master/linux_sql)]: Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in a cluster. PostgreSQL database provisioned using Docker. Bash scripts programmed to extract hardware specifications and, with the use of crontab, periodically update the database with usage data.
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu/tree/master/core_java)]:
       
@@ -42,7 +42,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_PrinceSand
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (December 2021-present)**: Exercised agile methodologies on a daily basis in a team environment to design and implement numerous software projects using a vide variety of technologies such as Linux, PostgreSQL, Docker, and Git.
+**Software Developer, Jarvis (December 2021-present)**: Exercised agile methodologies on a daily basis in a team environment to design and implement numerous software projects using a wide variety of technologies such as Linux, PostgreSQL, Docker, and Git.
 
 **Junior Application Developer, Ontario Ministry of Children, Community, and Social Services (September 2017-September 2018)**: Supported the System Development & Maintenance team in planning, developing, implementing, and testing the Child Protection Information Network application. Documented and tracked testing defects, debugged, and troubleshot to ensure new requirements are implemented while existing functionality is not compromised.
 
@@ -55,7 +55,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_PrinceSand
 
 ## Miscellaneous
 - Mobile App Development with React Native (Harvard edX, 2020)
-- Laguages: English, Punjabi, French
+- Languages: English, Punjabi, French
 - Day-trader
 - Volleyball, baseball, basketball, tennis, and hockey player
 - Bhangra Dancer

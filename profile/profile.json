@@ -24,7 +24,7 @@
   ],
   "jarvis_projects": [
     {
-      "description": "Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in the system. PostgreSQL database provisioned using Docker. Bash scripts programmed to extract hardware specifications and, with the use of crontab, periodically update the database with usage data.",
+      "description": "Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in a cluster. PostgreSQL database provisioned using Docker. Bash scripts programmed to extract hardware specifications and, with the use of crontab, periodically update the database with usage data.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
@@ -73,7 +73,7 @@
     },
     {
       "bullets": [
-        "Laguages: English, Punjabi, French"
+        "Languages: English, Punjabi, French"
       ],
       "title": "Languages"
     },
@@ -90,7 +90,7 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Exercised agile methodologies on a daily basis in a team environment to design and implement numerous software projects using a vide variety of technologies such as Linux, PostgreSQL, Docker, and Git.",
+      "description": "Exercised agile methodologies on a daily basis in a team environment to design and implement numerous software projects using a wide variety of technologies such as Linux, PostgreSQL, Docker, and Git.",
       "duration": "December 2021-present",
       "title": "Software Developer"
     },
@@ -103,10 +103,10 @@
   ],
   "skills": {
     "competent": [
-      "C",
       "JavaScript",
       "RDBMS/SQL",
       "HTML/CSS",
+      "C",
       "React Native",
       "LaTeX"
     ],
