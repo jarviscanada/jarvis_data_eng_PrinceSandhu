@@ -59,6 +59,7 @@ public class JavaGrepImp implements JavaGrep {
     /**
      * Read a file and return all the lines.
      * @param inputFile file to be read.
+     * @return List of all lines.
      * @throws IllegalArgumentException if a given inputFile is not a file.
      */
     @Override
