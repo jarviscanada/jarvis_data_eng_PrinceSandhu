@@ -40,38 +40,39 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in a cluster. PostgreSQL database provisioned using Docker. Bash scripts programmed to extract hardware specifications and, with the use of crontab, periodically update the database with usage data."
+    description: "Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in a cluster. PostgreSQL database provisioned using Docker. Bash scripts programmed to extract hardware specifications and, with the use of crontab, periodically update the database with usage data. Constructed SQL queries to extract and analyze data pertaining to the business requirements as requested by the LCA team."
   - name: "Core Java Apps"
     git_url: "/core_java"
     description:
       - "Twitter App: ..."
       - "JDBC App: ..."
       - "Grep App: ..."
-  - name: "Springboot App"
-    git_url: "/springboot"
-    description: ""
-  - name: "Python Data Analytics"
-    git_url: "/python_data_anlytics"
-    description: ""
-  - name: "Hadoop"
-    git_url: "/hadoop"
-    description: ""
-  - name: "Spark"
-    git_url: "/spark"
-    description: ""
-  - name: "Cloud/DevOps"
-    git_url: "/cloud_devops"
-    description: ""
+  
+  #- name: "Springboot App"
+    #git_url: "/springboot"
+    #description: ""
+  #- name: "Python Data Analytics"
+    #git_url: "/python_data_anlytics"
+    #description: ""
+  #- name: "Hadoop"
+    #git_url: "/hadoop"
+    #description: ""
+  #- name: "Spark"
+    #git_url: "/spark"
+    #description: ""
+  #- name: "Cloud/DevOps"
+    #git_url: "/cloud_devops"
+    #description: ""
 
 # List of personal or academic projects
 # Feel free to add more projects
 highlighted_projects:
     #project name
-  - name: "Project Emacs (Year IV Capstone Project)"
+  - name: "Project imacs (Year IV Capstone Project)"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Developed an application utilizing Typescript, HTML, and CSS, while adhering to the software development life cycle, that enables users to take textual and handwritten notes while organizing and visualizing them in a non-hierarchical convention, received an A+."
+    description: "Developed an application utilizing Typescript, HTML, and CSS, while adhering to the software development life cycle, that enables users to take textual and handwritten notes while organizing and visualizing them in a non-hierarchical convention, received an A+. Project was implemented in accordance with the Model-View-Controller architecture. File associations are stored in JSON format. D3 library utilized to display the graph representation of the files."
   - name: "GlobeTrans (Year III Cornerstone Project)"
-    description: "Designed a large software system compliant to the specified business events and user scenarios, in an agile and team environment; received an A+. Design process included: establishing requirements, identifying, implementing, and documenting the architectural and detailed designs, developing and testing the prototype."
+    description: "Designed and implemented a large software system compliant to the specified business events and user scenarios, in an agile and team environment; received an A+. System was designed and developed in accordance with the Presentation-Abstraction-Control (PAC) software architecture, where each mode of transportation (e.g., plane, rail, road, boat, etc.) is a substitutable subsystem. Application utilizes Dijkstra's Shortest Path Algorithm to display route between global cities with the modes of transporation that have been toggled. Design process included: establishing requirements, identifying, implementing, and documenting the architectural and detailed designs, developing and testing the prototype."
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
@@ -82,7 +83,7 @@ professional_experience:
     company: "Jarvis"
     duration: "December 2021-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Exercised agile methodologies on a daily basis in a team environment to design and implement numerous software projects using a wide variety of technologies such as Linux, PostgreSQL, Docker, and Git."
+    description: "Exercised agile methodologies on a daily basis in a team environment to design, implement, test, and deploy numerous software projects using a wide variety of technologies such as Java, Linux, PostgreSQL, Docker, and Git. Ameliorated organizational and time-management skills through the use of the Notion ticket-management system."
   - title: "Junior Application Developer"
     company: "Ontario Ministry of Children, Community, and Social Services"
     duration: "September 2017-September 2018"
