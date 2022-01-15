@@ -1,5 +1,5 @@
 # Introduction
-The Grep App of the Core Java project has been implemented to mimic the Linux `Grep` command in Java, which, given a regular expression and a root directory, enables users to search for matching strings from files and writes the matched strings to an output file. The first implementation of the Grep App, `JavaGrepImp`, utilizes nested `for` loops to scan files for matching strings, whereas the second implementation, `JavaGrepLambdaImp`, relies on Streams to accomplish the same goal. 
+The Grep App of the Core Java project has been implemented to mimic the Linux `Grep` command in Java, which, given a regular expression and a root directory, enables users to search for matching strings from files and writes the matched strings to an output file. The first implementation of the Grep App, `JavaGrepImp`, utilizes nested `for` loops to scan files for matching strings, whereas the second implementation, `JavaGrepLambdaImp`, relies on Streams to accomplish the aforementioned goal. 
 
 Technologies utilized:
 
