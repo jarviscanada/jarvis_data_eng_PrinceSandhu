@@ -49,7 +49,12 @@ The Grep App is limited by the default size of the heap, which is 5MB. If the fi
 How did you test your application manually? (e.g. prepare sample data, run some test cases manually, compare result)
 
 # Deployment
-How you dockerize your app for easier distribution?
+For ease of distribution, the Grep App has been packaged into a Docker Image and uploaded to Docker Hub. The Dockerfile is as follows:
+```
+FROM openjdk:8-alpine
+COPY target/grep*.jar /usr/local/app/grep/lib/grep.jar
+ENTRYPOINT ["java","-jar","/usr/local/app/grep/lib/grep.jar"]
+```
 
 # Improvements
 1. Include various `grep` flag options, such as `-i` to ignore case.
