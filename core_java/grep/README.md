@@ -43,8 +43,7 @@ writeToFile(matchedLines)
 ```
 
 ## Performance Issue
-(30-60 words)
-Discuss the memory issue and how would you fix it
+The Grep App is limited by the default size of the heap, which is 5MB. If the file being read by the program is greater than 5MB, an `OutOfMemoryError` is thrown. A possible workaround is to increase the heap size to exceed the size of the largest file that is being read using the `-Xms` command. The workaround of choice, however, is to utilize Stream APIs, as they effectively bypass storing matched lines to a list and instead write directly to the output file once the operation is complete.
 
 # Test
 How did you test your application manually? (e.g. prepare sample data, run some test cases manually, compare result)
@@ -52,5 +51,7 @@ How did you test your application manually? (e.g. prepare sample data, run some 
 # Deployment
 How you dockerize your app for easier distribution?
 
-# Improvement
-List three things you can improve in this project.
+# Improvements
+1. Include various `Grep` flag options, such as `-i` to ignore case.
+2. Search files for multiple regex patterns, as the program is currently limited to only one regex pattern.
+3. Provide option to skip specified files and directories.
