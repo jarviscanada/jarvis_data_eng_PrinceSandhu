@@ -52,6 +52,6 @@ How did you test your application manually? (e.g. prepare sample data, run some 
 How you dockerize your app for easier distribution?
 
 # Improvements
-1. Include various `Grep` flag options, such as `-i` to ignore case.
+1. Include various `grep` flag options, such as `-i` to ignore case.
 2. Search files for multiple regex patterns, as the program is currently limited to only one regex pattern.
 3. Provide option to skip specified files and directories.
