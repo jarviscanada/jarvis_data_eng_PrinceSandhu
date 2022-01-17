@@ -87,7 +87,7 @@ To avoid redundancy, the methods in `JavaGrepLambdaImp` were tested similarly, a
 
 ## Verifying Output
 
-Test Case: Line contains the words: "Romeo" and "Juliet".
+Test Case: Line contains the words: "Romeo" and "Juliet".\
 Test Result: pass.
 ```
 docker run --rm -v `pwd`/data:/data -v `pwd`/log:/log princesandhu/grep ".*Romeo.*Juliet.*" "./data" /log/"grep_out.txt"
