@@ -60,7 +60,8 @@ public class CustomerDAO extends DataAccessObject<Customer>{
             throw new RuntimeException(e);
         }
         try{
-            PreparedStatement statement = this.connection.prepareStatement(UPDATE);            statement.setString(1, dto.getFirstName());
+            PreparedStatement statement = this.connection.prepareStatement(UPDATE);
+            statement.setString(1, dto.getFirstName());
             statement.setString(2, dto.getLastName());
             statement.setString(3, dto.getEmail());
             statement.setString(4, dto.getPhone());
