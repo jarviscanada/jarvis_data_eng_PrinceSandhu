@@ -1,7 +1,9 @@
 package ca.jrvs.apps.jdbc;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class JDBCExecutor {
     public static void main(String[] args) {
@@ -10,14 +12,14 @@ public class JDBCExecutor {
             Connection connection = dcm.getConnection();
             CustomerDAO customerDAO = new CustomerDAO(connection);
             Customer customer = new Customer();
-            customer.setFirstName("John");
-            customer.setLastName("Adams");
-            customer.setEmail("jadams@wh.gov");
-            customer.setAddress("1234 Main St");
-            customer.setCity("Arlington");
+            customer.setFirstName("George");
+            customer.setLastName("Washington");
+            customer.setEmail("george.washington@wh.gov");
+            customer.setPhone("(555) 555-6543");
+            customer.setAddress("1234 Main St.");
+            customer.setCity("Mount Vernon");
             customer.setState("VA");
-            customer.setPhone("(555) 555-9845");
-            customer.setZipCode("01234");
+            customer.setZipCode("22121");
 
             Customer dbCustomer = customerDAO.create(customer);
             System.out.println(dbCustomer);
