@@ -18,8 +18,8 @@ Two accepted design patterns typically used for accessing databases in Java incl
 The JDBC App implements the Data Access Object pattern.\
 \
 **Data Access Object**: Through the means of an abstract Application Programming Interface, the Data Access Object is a structural design pattern that
-enables one to isolate the application/business layer from the persistence layer. Through the aforementioned means, the API effectively hides all
-complexities involved in performing CRUD operations in the underlying storage mechanism, which permits both layers to evolve independently of one another.\
+enables one to isolate the application/business layer from the persistence layer. Thus, the API effectively hides all complexities involved in performing
+CRUD operations in the underlying storage mechanism, which permits both layers to evolve independently of one another.\
 \
 **Repository**: Similar to the DAO pattern, the repository pattern effectively isolates the application/business layer from the persistence layer.
 ...
