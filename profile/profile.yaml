@@ -19,11 +19,11 @@ skills:
     - Git
   # At least 5 skills
   competent:
+    - React Native
     - JavaScript
     - RDBMS/SQL
     - HTML/CSS
     - C
-    - React Native
     - LaTeX
   # At least 5 skills
   familiar:
@@ -83,7 +83,7 @@ professional_experience:
     company: "Jarvis"
     duration: "December 2021-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Exercised agile methodologies on a daily basis in a team environment to design, implement, test, and deploy numerous software projects using a wide variety of technologies such as Java, Linux, PostgreSQL, Docker, and Git. Ameliorated organizational and time-management skills through the use of the Notion ticket-management system."
+    description: "Exercised agile methodologies on a daily basis in a team environment to design, implement, test, and deploy numerous software projects using a wide variety of technologies such as Java, Linux, PostgreSQL, Maven, Docker, and Git. Ameliorated organizational and time-management skills through the use of the Notion ticket-management system."
   - title: "Junior Application Developer"
     company: "Ontario Ministry of Children, Community, and Social Services"
     duration: "September 2017-September 2018"

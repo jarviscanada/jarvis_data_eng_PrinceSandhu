@@ -6,7 +6,7 @@ I have graduated with a Bachelor’s in Software Engineering from McMaster Unive
 
 **Proficient:** Java, Algorithms & Data Structures, Linux/Bash, Agile/Scrum, Git
 
-**Competent:** JavaScript, RDBMS/SQL, HTML/CSS, C, React Native, LaTeX
+**Competent:** React Native, JavaScript, RDBMS/SQL, HTML/CSS, C, LaTeX
 
 **Familiar:** TypeScript, React, Python, JUnit, MATLAB, UML
 
@@ -32,7 +32,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_PrinceSand
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (December 2021-present)**: Exercised agile methodologies on a daily basis in a team environment to design, implement, test, and deploy numerous software projects using a wide variety of technologies such as Java, Linux, PostgreSQL, Docker, and Git. Ameliorated organizational and time-management skills through the use of the Notion ticket-management system.
+**Software Developer, Jarvis (December 2021-present)**: Exercised agile methodologies on a daily basis in a team environment to design, implement, test, and deploy numerous software projects using a wide variety of technologies such as Java, Linux, PostgreSQL, Maven, Docker, and Git. Ameliorated organizational and time-management skills through the use of the Notion ticket-management system.
 
 **Junior Application Developer, Ontario Ministry of Children, Community, and Social Services (September 2017-September 2018)**: Supported the System Development & Maintenance team in planning, developing, implementing, and testing the Child Protection Information Network application. Documented and tracked testing defects, debugged, and troubleshot to ensure new requirements were implemented while existing functionality was not compromised.
 

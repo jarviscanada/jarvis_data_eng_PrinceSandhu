@@ -65,7 +65,7 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Exercised agile methodologies on a daily basis in a team environment to design, implement, test, and deploy numerous software projects using a wide variety of technologies such as Java, Linux, PostgreSQL, Docker, and Git. Ameliorated organizational and time-management skills through the use of the Notion ticket-management system.",
+      "description": "Exercised agile methodologies on a daily basis in a team environment to design, implement, test, and deploy numerous software projects using a wide variety of technologies such as Java, Linux, PostgreSQL, Maven, Docker, and Git. Ameliorated organizational and time-management skills through the use of the Notion ticket-management system.",
       "duration": "December 2021-present",
       "title": "Software Developer"
     },
@@ -78,11 +78,11 @@
   ],
   "skills": {
     "competent": [
+      "React Native",
       "JavaScript",
       "RDBMS/SQL",
       "HTML/CSS",
       "C",
-      "React Native",
       "LaTeX"
     ],
     "familiar": [
