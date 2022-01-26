@@ -14,17 +14,17 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_PrinceSandhu",
   "highlighted_projects": [
     {
-      "description": "Developed an application utilizing Typescript, HTML, and CSS, while adhering to the software development life cycle, that enables users to take textual and handwritten notes while organizing and visualizing them in a non-hierarchical convention, received an A+. Project was implemented in accordance with the Model-View-Controller architecture. File associations are stored in JSON format. D3 library utilized to display the graph representation of the files.",
+      "description": "Developed an application utilizing Typescript, HTML, and CSS, while adhering to the software development life cycle that enables users to take textual and handwritten notes while organizing and visualizing them in a non-hierarchical convention, received an A+. The project was implemented in accordance with the Model-View-Controller architecture. File associations are stored in JSON format. D3 library utilized to display the graph representation of the files.",
       "name": "Project imacs (Year IV Capstone Project)"
     },
     {
-      "description": "Designed and implemented a large software system compliant to the specified business events and user scenarios, in an agile and team environment; received an A+. System was designed and developed in accordance with the Presentation-Abstraction-Control (PAC) software architecture, where each mode of transportation (e.g., plane, rail, road, boat, etc.) is a substitutable subsystem. Application utilizes Dijkstra's Shortest Path Algorithm to display route between global cities with the modes of transporation that have been toggled. Design process included: establishing requirements, identifying, implementing, and documenting the architectural and detailed designs, developing and testing the prototype.",
+      "description": "Designed and implemented a large software system compliant to the specified business events and user scenarios in an agile and team environment; received an A+. The system was designed and developed in accordance with the Presentation-Abstraction-Control (PAC) software architecture, where each mode of transportation (e.g., plane, rail, road, boat, etc.) is a substitutable subsystem. The application utilizes Dijkstra’s Shortest Path Algorithm to display a route between global cities with the modes of transportation that have been toggled. The design process included: establishing requirements, identifying, implementing, and documenting the architectural and detailed designs, developing and testing the prototype.",
       "name": "GlobeTrans (Year III Cornerstone Project)"
     }
   ],
   "jarvis_projects": [
     {
-      "description": "Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in a cluster. PostgreSQL database provisioned using Docker. Bash scripts programmed to extract hardware specifications and, with the use of crontab, periodically update the database with usage data. Constructed SQL queries to extract and analyze data pertaining to the business requirements as requested by the LCA team.",
+      "description": "Developed a Linux Cluster Monitoring Agent which enables users to monitor the individual Linux hosts in a cluster. PostgreSQL database provisioned using Docker. Programmed Bash scripts to extract hardware specifications and periodically update the database with usage data with the use of crontab. Constructed SQL queries to extract and analyze data pertaining to the business requirements as requested by the LCA team.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
@@ -54,7 +54,7 @@
     },
     {
       "bullets": [
-        "Day-trader",
+        "Day-trader: scalping \u0026 momentum trading",
         "Volleyball, baseball, basketball, tennis, and hockey player",
         "Bhangra Dancer",
         "Maple Leafs, Blue Jays, Raptors, UFC fan"
@@ -71,7 +71,7 @@
     },
     {
       "company": "Ontario Ministry of Children, Community, and Social Services",
-      "description": "Supported the System Development \u0026 Maintenance team in planning, developing, implementing, and testing the Child Protection Information Network application. Documented and tracked testing defects, debugged, and troubleshot to ensure new requirements are implemented while existing functionality is not compromised.",
+      "description": "Supported the System Development \u0026 Maintenance team in planning, developing, implementing, and testing the Child Protection Information Network application. Documented and tracked testing defects, debugged, and troubleshot to ensure new requirements were implemented while existing functionality was not compromised.",
       "duration": "September 2017-September 2018",
       "title": "Junior Application Developer"
     }
