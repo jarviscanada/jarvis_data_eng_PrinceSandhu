@@ -8,7 +8,7 @@ class EvenOrOdd {
      * @param num (primitive int).
      * @return String even or odd.
      */
-    public static String moduloApproach(int num) {
+    public String moduloApproach(int num) {
         return num % 2 == 0 ? "Even" : "Odd";
     }
 
@@ -18,7 +18,7 @@ class EvenOrOdd {
      * @param num (primitive int).
      * @return String even or odd.
      */
-    public static String bitOperatorApproach(int num){
+    public String bitOperatorApproach(int num){
         return (num ^ 1) == num + 1 ? "even" : "odd";
     }
 }
