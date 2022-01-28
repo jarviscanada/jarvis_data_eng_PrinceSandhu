@@ -8,7 +8,7 @@ public class QueueUsingStacks {
     Stack<Integer> popStack;
 
     //Constructor
-    public myQueue(){
+    public QueueUsingStacks(){
         pushStack = new Stack<>();
         popStack = new Stack<>();
     }
