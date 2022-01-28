@@ -23,7 +23,7 @@ public class QueueUsingStacks {
 
     /**
      * Big-O: O(n)
-     * @return x remove element from the front of the queue.
+     * @return x remove element from the front of the queue
      */
     public int pop(){
         while(popStack.isEmpty()){
