@@ -22,7 +22,7 @@ public class QueueUsingStacks {
     }
 
     /**
-     * Big-O: O(1)
+     * Big-O: O(n)
      * @return x remove element from the front of the queue.
      */
     public int pop(){
@@ -35,7 +35,7 @@ public class QueueUsingStacks {
     }
 
     /**
-     * Big-O: O(1)
+     * Big-O: O(n)
      * @return x return element from the front of the queue.
      */
     public int peek(){
