@@ -11,7 +11,7 @@ Technologies utilized:
 
 # Implementation
 ## ER Diagram
-ER diagram
+![ER_diagram](./assets/HPlusSport_ERDiagram.png)
 
 ## Design Patterns
 Two accepted design patterns typically used for accessing databases in Java include the Data Access Object (DAO) and the Respository design patterns.
