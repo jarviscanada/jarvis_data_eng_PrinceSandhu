@@ -14,7 +14,7 @@ Technologies utilized:
 ![ER_diagram](./assets/HPlusSport_ERDiagram.png)
 
 ## Design Patterns
-Two accepted design patterns typically used for accessing databases in Java include the Data Access Object (DAO) and the Respository design patterns.
+Two accepted design patterns typically used for accessing databases in Java include the Data Access Object (DAO) and the Repository design patterns.
 Both of these aforementioned design patterns serve the purpose of isolating the application/business layer from the persistence layer, but subtly vary
 from one another. The JDBC App implements the Data Access Object pattern.\
 \
